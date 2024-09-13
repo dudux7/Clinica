@@ -1,7 +1,6 @@
 <?php 
     require_once "Humano.php";
-    class Cliente extends Humano {
-
-
+    class Veterinario extends Humano {
+        
         
     }

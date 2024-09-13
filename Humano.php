@@ -5,15 +5,15 @@
     public $Endereco;
     public $Contato;
 
-        public function __Construct($Nome, $Idade, $Endereco, $Contato) {
-        $this->Nome = $Nome;
+        public function __Construct($NomeHumano, $Idade, $Endereco, $Contato) {
+        $this->NomeHumano = $NomeHumano;
         $this->Idade = $Idade;
         $this->Endereco = $Endereco;
         $this->Cor = $Contato;
         }
 
-        public function Falar(){
-        echo "eu sou um animal \n";
-        }
+        public function getNome() {
+            return $this->NomeHumano;
 
+        }
     }
