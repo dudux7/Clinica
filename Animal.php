@@ -28,7 +28,7 @@ class Animal {
             echo "eu sou um animal \n";
         }
         public function apresentar() {
-            echo "{$this->NomeAnimal}, pertence ao Cliente {$this->getNomeDono()} \n";
+            echo "{$this->NomeAnimal}, pertence ao Cliente {$this->GetNomeDono()} \n";
             echo "FICHA TÉCNICA / \n";
             echo "Raça: {$this->Raca} \n";
             echo "Quantidade de Patas: {$this->QtdPatas} \n";

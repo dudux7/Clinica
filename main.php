@@ -9,6 +9,8 @@
     require_once "Funcionario.php";
     require_once "Vendedor.php";
     require_once "Veterinario.php";
+    require_once "Estoque.php";
+    require_once "Vendas.php";
     
 //Humanos
         $Cliente1 = new Cliente ("João", 19, "Rua Memphis Ronaldo de Garro Guedes, 2012", "94 91010-1237");
@@ -35,6 +37,28 @@
 //Funcionarios
         $Carlos = new Balconista ("Carlos", 30,"Rua dos Trabalhadores","00800921");
         $Carlos->Falar();
+        $Carlos->Salario();
 
+        $Tais = new Vendedor ("Tais",20,"Rua xavier Roni Ramos","55362710");
+        $Tais->Falar();
+        $Tais->Salario();
 
+        $Ana = new Veterinario("Ana", 35, "Rua dos Médicos", "55555555");
+        $Ana->Falar();
+        $Ana->Salario();
+
+        $produto1 = new Estoque("Ração para Cachorro", 50.00, 10);
+        $produto2 = new Estoque("Ração para Gato", 40.00, 15);
+
+        $venda1 = new Vendas(90.00, 2, $produto1);
+        $venda1->adicionarProduto($produto1, 2);
+        $venda1->finalizarCompra();
+    
+        $venda2 = new Vendas(80.00, 1, $produto2);
+        $venda2->adicionarProduto($produto2, 1);
+        $venda2->finalizarCompra(); 
+
+        echo "\n Informações dos Produtos: \n";
+        echo $produto1->ListaProduto();
+        echo $produto2->ListaProduto();
 ?>

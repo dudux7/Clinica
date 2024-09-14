@@ -9,7 +9,7 @@
         $this->NomeHumano = $NomeHumano;
         $this->Idade = $Idade;
         $this->Endereco = $Endereco;
-        $this->Cor = $Contato;
+        $this->Contato = $Contato;
         }
 
         public function getNome() {
@@ -17,3 +17,4 @@
 
         }
     }
+    

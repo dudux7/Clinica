@@ -1,11 +1,11 @@
 <?php 
-    require_once "Humano.php";
-    class Vendedor extends Humano {
+    require_once "Funcionario.php";
 
-        public function Falar(){
+    class Vendedor extends Funcionario {
+        public $Comissão = 900;
 
-            echo "eu sou um vendedor \n";
-            
+        public function Salario() {
+            $this->SalarioFinal = $this->SalarioBase + $this->Comissão;
+            echo "O salario base é: " . $this->SalarioFinal . "\n";
         }
-        
     }
