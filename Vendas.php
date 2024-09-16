@@ -1,14 +1,16 @@
 <?php
-require_once "Produto.php";
+require_once "Estoque.php";
 require_once "Cliente.php";
 
+
 class Vendas {
-    public $Cliente;
+    public $cliente;
     public $Produtos = [];
     public $ValorTotal = 0;
 
-    public function __construct($Cliente) {
-        $this->Cliente = $Cliente;
+
+    public function __construct($cliente) {
+        $this->cliente = $cliente;
     }
 
     public function adicionarProduto(Estoque $Produto, $Quantidade) {
@@ -17,11 +19,10 @@ class Vendas {
     }
 
     public function finalizarCompra() {
-        echo "Cliente: {$this->Cliente->getNome()} \n";
         echo "Compra finalizada com sucesso!\n";
         echo "Produtos:\n";
-        foreach ($this->Produtos as [$produto, $quantidade]) {
-            echo "{$produto->Produto} - Quantidade: $quantidade - Preço Unitário: R$ {$produto->Preco}\n";
+        foreach ($this->Produtos as [$Produto, $quantidade]) {
+            echo "{$Produto->Produto} - Quantidade: $quantidade - Preço Unitário: R$ {$Produto->Preco}\n";
         }
         echo "Valor Total: R$ {$this->ValorTotal}\n";
     }
